@@ -37,9 +37,8 @@
                                         <label class="small mb-1" for="category">Categoria</label>
                                         <select class="form-select" [(ngModel)]="peticion.category_id"
                                             aria-label="Default select" name="category" id="category">
-                                            <option>Selecciona una categoria</option>
-                                            <option>1</option>
-                                            <option>2</option>
+                                            <option selected>Selecciona una categoria</option>
+                                            <option *ngFor="let categoria of categorias" value={{categoria.id}}>{{categoria.name}}</option>
                                         </select>
                                     </div>
                                 </div>

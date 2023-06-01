@@ -14,12 +14,18 @@ export class EditPeticionComponent implements OnInit{
   idPeticion: number;
   form!: FormGroup;
   selectedImage!: any;
+  categorias: any;
 
   constructor(private router: Router, private route: ActivatedRoute, private peticionService: PeticionService, private fb: FormBuilder){
     this.idPeticion = this.route.snapshot.params['idPeticion'];
   }
   ngOnInit(): void {
-    this.getPeticion()
+    this.getPeticion();
+
+    this.peticionService.categorias().subscribe(
+      response =>{
+      this.categorias = response;
+    });
   }
 
   getPeticion(): void {
@@ -46,5 +52,5 @@ export class EditPeticionComponent implements OnInit{
   onSelectImage(event: any) {
     this.selectedImage = event.target.files[0];
   }
-  
+
 }

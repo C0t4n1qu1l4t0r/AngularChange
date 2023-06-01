@@ -23,6 +23,7 @@ export class HeaderLayoutComponent implements OnInit {
   imagen!: any;
   selectedImage!: any;
   form!: FormGroup;
+  categorias : any;
   @Output() miFuncion!: EventEmitter<void>;
 
   constructor(private userService: AuthService, private peticionService: PeticionService, private router: Router, private cdr: ChangeDetectorRef, private fb: FormBuilder) {
@@ -36,6 +37,11 @@ export class HeaderLayoutComponent implements OnInit {
       destinatario: '',
       category_id: '',
       file: ''
+    });
+
+    this.peticionService.categorias().subscribe(
+      response =>{
+      this.categorias = response;
     });
 
     this.getDatos();
@@ -80,7 +86,7 @@ export class HeaderLayoutComponent implements OnInit {
     this.email = '';
     this.password = '';
     this.confirm_password = '';
-    
+
 
   }
 

@@ -27,6 +27,10 @@ export class PeticionService {
     this.peticiones = respuesta.data;
   }
 
+  categorias(){
+    return this.http.get<any[]>(this.apiUrl + '/categorias');
+  }
+
   crear(peticion: any) {
     const token = localStorage.getItem('token');
     const url = this.apiUrl + '/add';

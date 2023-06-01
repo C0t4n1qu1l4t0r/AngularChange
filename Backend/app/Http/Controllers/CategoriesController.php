@@ -17,4 +17,9 @@ class CategoriesController extends Controller
         $category = new Category($input);
         $category->save();
     }
+    public function index(){
+        $categorias = Category::all();
+
+        return $categorias;
+    }
 }

@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+Route::get('/peticiones/categorias', [\App\Http\Controllers\CategoriesController::class, 'index']);
 
 //Peticiones
 Route::get('/peticiones/listado', [\App\Http\Controllers\PeticionesController::class, 'list']);

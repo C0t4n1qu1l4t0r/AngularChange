@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { FooterLayoutComponent } from './layout/footer-layout/footer-layout.component';
 import { HeaderLayoutComponent } from './layout/header-layout/header-layout.component';
 import { AuthService } from './services/auth.service';
 import { PeticionService } from './services/peticion.service';
@@ -17,8 +16,6 @@ import { EditPeticionComponent } from './edit-peticion/edit-peticion.component';
   declarations: [
     AppComponent,
     HeaderLayoutComponent,
-    FooterLayoutComponent,
-    FooterLayoutComponent,
     PeticionesComponent,
     MisPeticionesComponent,
     EditPeticionComponent,

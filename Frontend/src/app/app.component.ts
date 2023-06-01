@@ -7,6 +7,6 @@ import { PeticionService } from './services/peticion.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent{
- title = 'Change-front';
+ title = 'Change Razvan';
 
 }
